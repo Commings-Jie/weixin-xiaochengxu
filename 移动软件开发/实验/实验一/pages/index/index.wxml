@@ -1,9 +1,0 @@
-<!--index.wxml-->
-<navigation-bar title="Hello World" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y>
-  <view class="container">
-    <image class="my-image" mode="widthFix" src="/img/爱芮.png"></image>
-    <text class="name-text">{{charName}}</text>
-    <button class="toggle-btn" bindtap="onToggle">切换</button>
-  </view>
-</scroll-view>
