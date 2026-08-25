@@ -1,0 +1,259 @@
+/**index.wxss**/
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.page-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 头图区域 ========== */
+.header-section {
+  width: 100%;
+  position: relative;
+}
+
+.header-image {
+  width: 100%;
+  display: block;
+}
+
+/* ========== 卡片区域 ========== */
+.card-section {
+  padding: 0 24rpx 40rpx;
+  margin-top: -20rpx;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== 个人信息卡片 ========== */
+.info-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 36rpx 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24rpx;
+}
+
+.avatar-wrapper {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(30, 144, 255, 0.2);
+}
+
+.avatar-text {
+  font-size: 44rpx;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.name-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 40rpx;
+  color: #1a1a1a;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+}
+
+.subtitle {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+
+.divider {
+  height: 1rpx;
+  background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+  margin: 8rpx 0 24rpx;
+}
+
+/* ========== 信息列表 ========== */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 16rpx;
+  background: #f8f9fa;
+  border-radius: 16rpx;
+}
+
+.info-item:active {
+  background: #eef4ff;
+}
+
+.info-icon {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.email-icon {
+  background: #e8f0fe;
+}
+
+.web-icon {
+  background: #e6f7ff;
+}
+
+.school-icon {
+  background: #f0f5ff;
+}
+
+.school-logo-img {
+  width: 68rpx;
+  height: 68rpx;
+}
+
+.major-icon {
+  background: #f5f0ff;
+}
+
+.icon-text {
+  font-size: 32rpx;
+}
+
+.info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.info-label {
+  font-size: 22rpx;
+  color: #999999;
+  margin-bottom: 4rpx;
+}
+
+.info-value {
+  font-size: 26rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info-action {
+  padding: 8rpx 20rpx;
+  background: #e8f0fe;
+  border-radius: 24rpx;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+
+.action-text {
+  font-size: 22rpx;
+  color: #1e90ff;
+}
+
+/* ========== 关于我卡片 ========== */
+.intro-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 36rpx 32rpx;
+  margin-top: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.06);
+}
+
+.intro-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.title-bar {
+  width: 6rpx;
+  height: 32rpx;
+  background: linear-gradient(180deg, #1e90ff, #00bfff);
+  border-radius: 3rpx;
+  margin-right: 16rpx;
+}
+
+.title-text {
+  font-size: 32rpx;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.intro-text {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ========== 技能标签卡片 ========== */
+.skills-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 36rpx 32rpx;
+  margin-top: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.06);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.tag {
+  padding: 12rpx 28rpx;
+  background: #e8f0fe;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+  color: #1e90ff;
+}
+
+.tag:active {
+  background: #d0e4ff;
+}
+
+/* ========== 底部 ========== */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 48rpx 0 24rpx;
+}
+
+.footer-text {
+  font-size: 24rpx;
+  color: #cccccc;
+  letter-spacing: 4rpx;
+}

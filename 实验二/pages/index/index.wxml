@@ -1,0 +1,110 @@
+<!--index.wxml-->
+<navigation-bar title="我的名片" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="page-container">
+
+    <!-- 上半部分：AI生成的名片头图 -->
+    <view class="header-section">
+      <image class="header-image" src="/images/card-header.png" mode="widthFix"></image>
+    </view>
+
+    <!-- 下半部分：自定义个人信息卡片 -->
+    <view class="card-section">
+
+      <!-- 个人简介卡片 -->
+      <view class="info-card">
+        <view class="card-header">
+          <view class="avatar-wrapper">
+            <text class="avatar-text">贺</text>
+          </view>
+          <view class="name-section">
+            <text class="name">贺凡思杰</text>
+            <text class="subtitle">智能科学与技术专业</text>
+          </view>
+        </view>
+
+        <view class="divider"></view>
+
+        <!-- 信息列表 -->
+        <view class="info-list">
+          <view class="info-item" bindtap="onCopyEmail">
+            <view class="info-icon email-icon">
+              <text class="icon-text">✉</text>
+            </view>
+            <view class="info-content">
+              <text class="info-label">邮箱</text>
+              <text class="info-value">2167316266@qq.com</text>
+            </view>
+            <view class="info-action">
+              <text class="action-text">复制</text>
+            </view>
+          </view>
+
+          <view class="info-item" bindtap="onVisitBlog">
+            <view class="info-icon web-icon">
+              <text class="icon-text">🌐</text>
+            </view>
+            <view class="info-content">
+              <text class="info-label">个人博客</text>
+              <text class="info-value">commings-jie.github.io</text>
+            </view>
+            <view class="info-action">
+              <text class="action-text">访问</text>
+            </view>
+          </view>
+
+          <view class="info-item">
+            <view class="info-icon school-icon">
+              <image class="school-logo-img" src="/images/ouc-logo.png" mode="aspectFit"></image>
+            </view>
+            <view class="info-content">
+              <text class="info-label">学校</text>
+              <text class="info-value">中国海洋大学 · 信息学部</text>
+            </view>
+          </view>
+
+          <view class="info-item">
+            <view class="info-icon major-icon">
+              <text class="icon-text">🎓</text>
+            </view>
+            <view class="info-content">
+              <text class="info-label">专业</text>
+              <text class="info-value">智能科学与技术</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 个人介绍卡片 -->
+      <view class="intro-card">
+        <view class="intro-title">
+          <view class="title-bar"></view>
+          <text class="title-text">关于我</text>
+        </view>
+        <text class="intro-text">一名白日梦想家，正在学习移动软件开发，平时听听歌、打打游戏</text>
+      </view>
+
+      <!-- 技能标签卡片 -->
+      <view class="skills-card">
+        <view class="intro-title">
+          <view class="title-bar"></view>
+          <text class="title-text">技能标签</text>
+        </view>
+        <view class="tags-container">
+          <view class="tag">Python</view>
+          <view class="tag">微信小程序</view>
+          <view class="tag">前端开发</view>
+          <view class="tag">数据分析</view>
+          <view class="tag">AI应用</view>
+        </view>
+      </view>
+
+      <!-- 底部 -->
+      <view class="footer">
+        <text class="footer-text">— 感谢浏览我的名片 —</text>
+      </view>
+
+    </view>
+  </view>
+</scroll-view>
