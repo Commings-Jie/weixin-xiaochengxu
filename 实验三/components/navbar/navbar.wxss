@@ -1,0 +1,59 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a5f9e;
+  z-index: 999;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  padding: 0 16rpx;
+}
+
+/* 返回按钮 */
+.navbar-back {
+  width: 72rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.back-icon {
+  font-size: 52rpx;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* 标题居中区域 */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+}
+
+.navbar-logo {
+  width: 56rpx;
+  height: 56rpx;
+  flex-shrink: 0;
+}
+
+.navbar-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2rpx;
+}
+
+/* 右侧占位（与返回按钮等宽，保持标题居中） */
+.navbar-right {
+  width: 72rpx;
+  flex-shrink: 0;
+}

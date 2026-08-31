@@ -1,0 +1,57 @@
+<navbar title="海大新闻网"></navbar>
+
+<!-- 搜索栏 -->
+<view class="search-bar">
+  <view class="search-box">
+    <text class="search-icon">🔍</text>
+    <input class="search-input" placeholder="搜索新闻" confirm-type="search" bindinput="onSearchInput" bindconfirm="onSearch" value="{{searchKeyword}}"/>
+    <text class="search-clear" wx:if="{{searchKeyword}}" bindtap="clearSearch">✕</text>
+  </view>
+</view>
+
+<!-- 幻灯片 -->
+<swiper indicator-dots="true" autoplay="true" interval="4000" duration="500" circular="true">
+  <view wx:for="{{swiperList}}" wx:key="id">
+    <swiper-item bindtap="goToSwiperDetail" data-id="{{item.id}}">
+      <image src="{{item.src}}" mode="aspectFill"></image>
+      <view class="swiper-title-bar">
+        <text class="swiper-title-text">{{item.title}}</text>
+      </view>
+    </swiper-item>
+  </view>
+</swiper>
+
+<!-- 分类标签栏 -->
+<scroll-view class="category-bar" scroll-x="true">
+  <view class="category-item {{currentCategory === item ? 'active' : ''}}" 
+        wx:for="{{categories}}" 
+        wx:key="*this"
+        bindtap="switchCategory"
+        data-category="{{item}}">
+    {{item}}
+  </view>
+</scroll-view>
+
+<!-- 搜索结果提示 -->
+<view class="search-result-tip" wx:if="{{isSearching}}">
+  <text>找到 {{newsList.length}} 条相关结果</text>
+  <text class="search-result-clear" bindtap="clearSearch">清除搜索</text>
+</view>
+
+<!-- 新闻列表 -->
+<view class="news-list">
+  <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+    <image src="{{item.poster}}" mode="aspectFill" bindtap="goToDetail" data-id="{{item.id}}"></image>
+    <view class="news-info" bindtap="goToDetail" data-id="{{item.id}}">
+      <text class="news-title">{{item.title}}</text>
+      <view class="news-meta">
+        <text class="news-category">{{item.category}}</text>
+        <text class="news-date">{{item.add_date}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="empty-search" wx:if="{{isSearching && newsList.length === 0}}">
+    <text class="empty-icon">🔍</text>
+    <text class="empty-text">未找到相关新闻</text>
+  </view>
+</view>

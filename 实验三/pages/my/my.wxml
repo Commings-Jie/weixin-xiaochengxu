@@ -1,0 +1,79 @@
+<navbar title="个人中心" showHome="{{true}}"></navbar>
+
+<!-- 登录页面 -->
+<view class="myLogin">
+  <block wx:if="{{isLogin}}">
+    <image class="user-avatar" src="{{src}}"></image>
+    <text class="nickname">{{nickName}}</text>
+    <text class="login-type">（{{loginType}}登录）</text>
+    <view class="logout-btn" bindtap="logout">退出登录</view>
+  </block>
+  <view wx:else class="login-area">
+    <!-- 用户头像占位 -->
+    <view class="avatar-placeholder">
+      <text class="avatar-emoji">👤</text>
+    </view>
+    
+    <!-- 微信账号登录 -->
+    <view class="login-hint">登录后享受收藏功能</view>
+    <view class="login-buttons">
+      <button class="login-btn wx-login-btn" bindtap="goWxLogin">
+        <text class="btn-emoji">💬</text>
+        <text class="btn-text">微信账号登录</text>
+      </button>
+    </view>
+  </view>
+</view>
+
+<!-- 微信登录信息填写页（选择头像+填写昵称） -->
+<view class="wx-profile-page" wx:if="{{showWxProfile}}">
+  <view class="profile-header">
+    <text class="profile-title">完善个人信息</text>
+  </view>
+  <view class="profile-form">
+    <!-- 头像选择 -->
+    <view class="profile-item">
+      <text class="profile-label">头像</text>
+      <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image class="avatar-preview" wx:if="{{tempAvatar}}" src="{{tempAvatar}}"></image>
+        <view class="avatar-select-placeholder" wx:else>
+          <text class="camera-emoji">📷</text>
+        </view>
+        <text class="avatar-tip">点击选择头像</text>
+      </button>
+    </view>
+    <!-- 昵称输入 -->
+    <view class="profile-item">
+      <text class="profile-label">昵称</text>
+      <input class="nickname-input" type="nickname" placeholder="请输入昵称" bindinput="onNicknameInput" bindblur="onNicknameInput" value="{{tempNickName}}"/>
+    </view>
+  </view>
+  <view class="profile-footer">
+    <button class="profile-cancel" bindtap="cancelWxProfile">取消</button>
+    <button class="profile-confirm" bindtap="confirmWxProfile">确认登录</button>
+  </view>
+</view>
+
+<!-- 收藏列表 -->
+<view class="myFavorite">
+  <view class="section-header">
+    <view class="bar"></view>
+    <text class="section-title">我的收藏（{{number}}）</text>
+  </view>
+
+  <view class="news-list" wx:if="{{newsList.length > 0}}">
+    <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}" bindtap="goToDetail" data-id="{{item.id}}">
+      <image src="{{item.poster}}" mode="aspectFill"></image>
+      <view class="news-info">
+        <text class="news-title">{{item.title}}</text>
+        <text class="news-date">{{item.add_date}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-tip" wx:else>
+    <view class="empty-icon">📭</view>
+    <text class="empty-text">暂无收藏内容</text>
+    <text class="empty-sub">浏览新闻时点击收藏即可添加</text>
+  </view>
+</view>

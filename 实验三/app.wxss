@@ -1,0 +1,84 @@
+/* 全局公共样式 */
+page {
+  background-color: #f4f6f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+}
+
+/* ========== 分区标题 ========== */
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 24rpx 10rpx;
+  background-color: #fff;
+}
+
+.section-header .bar {
+  width: 6rpx;
+  height: 32rpx;
+  background-color: #1a5f9e;
+  border-radius: 3rpx;
+  margin-right: 14rpx;
+}
+
+.section-header .section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.section-header .more {
+  margin-left: auto;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* ========== 新闻列表 ========== */
+.news-list {
+  padding: 0 24rpx;
+  background-color: #fff;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eef1f3;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item image {
+  height: 140rpx;
+  width: 210rpx;
+  border-radius: 8rpx;
+  flex-shrink: 0;
+}
+
+.news-item .news-info {
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140rpx;
+}
+
+.news-item .news-title {
+  font-size: 28rpx;
+  color: #222;
+  line-height: 42rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.news-item .news-date {
+  font-size: 22rpx;
+  color: #aaa;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,21 @@
+<view class="navbar" style="padding-top: {{statusBarHeight}}px;">
+  <view class="navbar-inner" style="height: {{navBarHeight}}px;">
+    <!-- 返回按钮 -->
+    <view class="navbar-back" wx:if="{{showBack}}" bindtap="goBack">
+      <text class="back-icon">‹</text>
+    </view>
+    <!-- 首页按钮 -->
+    <view class="navbar-back" wx:if="{{showHome}}" bindtap="goHome">
+      <text class="back-icon">‹</text>
+    </view>
+    <!-- 标题区域（居中） -->
+    <view class="navbar-center">
+      <image class="navbar-logo" src="/images/logo.png" mode="aspectFit"></image>
+      <text class="navbar-title">{{title}}</text>
+    </view>
+    <!-- 右侧占位（保持居中） -->
+    <view class="navbar-right" wx:if="{{showBack || showHome}}"></view>
+  </view>
+</view>
+<!-- 占位 -->
+<view style="height: {{statusBarHeight + navBarHeight}}px;"></view>

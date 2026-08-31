@@ -1,0 +1,153 @@
+/* 搜索栏 */
+.search-bar {
+  background-color: #fff;
+  padding: 16rpx 24rpx;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 32rpx;
+  padding: 0 24rpx;
+  height: 64rpx;
+  border: 1rpx solid #e8e8e8;
+}
+
+.search-icon {
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+
+.search-input {
+  flex: 1;
+  height: 64rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-clear {
+  font-size: 24rpx;
+  color: #999;
+  padding: 8rpx;
+  margin-left: 8rpx;
+}
+
+/* 搜索结果提示 */
+.search-result-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx 24rpx;
+  background-color: #eaf3fb;
+  font-size: 24rpx;
+  color: #1a5f9e;
+}
+
+.search-result-clear {
+  color: #666;
+  font-size: 24rpx;
+}
+
+/* 空搜索 */
+.empty-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+
+.empty-search .empty-icon {
+  font-size: 60rpx;
+  margin-bottom: 16rpx;
+}
+
+.empty-search .empty-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 幻灯片部分 */
+swiper {
+  height: 360rpx;
+  width: 100%;
+}
+
+swiper-item {
+  position: relative;
+}
+
+swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 轮播图标题栏 - 叠加在图片底部 */
+.swiper-title-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 40rpx 24rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.swiper-title-text {
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  display: block;
+}
+
+/* 分类标签栏 */
+.category-bar {
+  white-space: nowrap;
+  background-color: #fff;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #eef1f3;
+}
+
+.category-item {
+  display: inline-block;
+  padding: 10rpx 28rpx;
+  margin: 0 10rpx;
+  font-size: 26rpx;
+  color: #666;
+  border-radius: 24rpx;
+  background-color: #f5f7fa;
+}
+
+.category-item.active {
+  background-color: #1a5f9e;
+  color: #fff;
+}
+
+/* 新闻列表 */
+.news-list {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.news-category {
+  font-size: 22rpx;
+  color: #1a5f9e;
+  background-color: #eaf3fb;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+}

@@ -1,0 +1,49 @@
+<navbar title="新闻详情" showBack="{{true}}"></navbar>
+
+<view class="container">
+  <!-- 标题 -->
+  <view class="title">{{article.title}}</view>
+
+  <!-- 元信息 -->
+  <view class="meta">
+    <text class="meta-date">{{article.add_date}}</text>
+    <text class="meta-source">中国海洋大学新闻网</text>
+  </view>
+
+  <!-- 海报 -->
+  <view class="poster">
+    <image src="{{article.poster}}" mode="widthFix"></image>
+  </view>
+
+  <!-- 正文 -->
+  <view class="content">
+    <view class="paragraph" wx:for="{{paragraphs}}" wx:key="index">
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 作者信息 -->
+  <view class="article-info" wx:if="{{article.author || article.editor || article.responsible_editor}}">
+    <view class="info-row" wx:if="{{article.author}}">
+      <text class="info-label">文/图：</text>
+      <text class="info-value">{{article.author}}</text>
+    </view>
+    <view class="info-row" wx:if="{{article.editor}}">
+      <text class="info-label">编辑：</text>
+      <text class="info-value">{{article.editor}}</text>
+    </view>
+    <view class="info-row" wx:if="{{article.responsible_editor}}">
+      <text class="info-label">责任编辑：</text>
+      <text class="info-value">{{article.responsible_editor}}</text>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="divider"></view>
+
+  <!-- 收藏按钮 -->
+  <view class="fav-btn-wrap">
+    <button wx:if="{{isAdd}}" class="fav-btn fav-active" bindtap="cancelFavorites">❤️ 已收藏</button>
+    <button wx:else class="fav-btn" bindtap="addFavorites">❤️ 收藏本文</button>
+  </view>
+</view>
