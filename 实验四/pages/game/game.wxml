@@ -1,0 +1,40 @@
+<!--game.wxml-->
+<view class='container'>
+  <!-- 关卡提示 -->
+  <view class='title'>第{{level}}关</view>
+
+  <!-- 游戏画布 -->
+  <canvas canvas-id='myCanvas'></canvas>
+
+  <!-- 统计信息 -->
+  <view class='stats'>
+    <text>步数：{{steps}}</text>
+    <text>箱子：{{completed}}/{{total}}</text>
+  </view>
+
+  <!-- 方向键 -->
+  <view class='btnGrid'>
+    <button class='dir-btn undo-btn' bindtap='undo'>↩</button>
+    <button class='dir-btn' type='warn' bindtap='up'>↑</button>
+    <view></view>
+    <button class='dir-btn' type='warn' bindtap='left'>←</button>
+    <button class='dir-btn' type='warn' bindtap='down'>↓</button>
+    <button class='dir-btn' type='warn' bindtap='right'>→</button>
+  </view>
+
+  <!-- "重新开始"按钮 -->
+  <button class='restart-btn' type='warn' bindtap='restartGame'>重新开始</button>
+
+  <!-- 通关弹窗 -->
+  <cover-view class='win-mask' wx:if='{{showWin}}'>
+    <cover-view class='win-card'>
+      <cover-view class='win-close' bindtap='stayLevel'>✕</cover-view>
+      <cover-view class='win-title'>恭喜通关！</cover-view>
+      <cover-view class='win-info'>本关共用 {{steps}} 步</cover-view>
+      <cover-view class='win-btns'>
+        <cover-view class='win-btn prev-btn' wx:if='{{hasPrev}}' bindtap='prevLevel'>上一关</cover-view>
+        <cover-view class='win-btn next-btn' wx:if='{{hasNext}}' bindtap='nextLevel'>下一关</cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</view>

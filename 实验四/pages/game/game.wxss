@@ -1,0 +1,140 @@
+/**game.wxss**/
+
+/* 游戏画布样式 */
+canvas {
+  border: 1rpx solid;
+  width: 320px;
+  height: 320px;
+}
+
+/* 统计信息 */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+  margin: 15rpx 0;
+  font-size: 28rpx;
+  color: #E64340;
+  font-weight: bold;
+}
+
+/* 方向键按钮整体区域 - 3列2行网格 */
+.btnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+/* 所有方向键按钮 */
+.dir-btn {
+  width: 120rpx !important;
+  height: 120rpx !important;
+  min-height: 120rpx !important;
+  line-height: 120rpx !important;
+  font-size: 48rpx !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 12rpx !important;
+  padding: 0 !important;
+  border-radius: 16rpx;
+}
+
+/* 通关弹窗遮罩 */
+.win-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* 通关弹窗卡片 */
+.win-card {
+  width: 520rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 50rpx 40rpx 40rpx;
+  position: relative;
+}
+
+/* 关闭按钮 */
+.win-close {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  color: #999;
+}
+
+.win-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #E64340;
+  margin-bottom: 16rpx;
+  text-align: center;
+}
+
+.win-info {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.win-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.win-btn {
+  width: 220rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  margin: 0 10rpx;
+  text-align: center;
+}
+
+.prev-btn {
+  background: #fff;
+  color: #E64340;
+  border: 2rpx solid #E64340;
+}
+
+.next-btn {
+  background: #E64340;
+  color: #fff;
+  border: 2rpx solid #E64340;
+}
+
+/* 回退按钮 */
+.undo-btn {
+  background: #fff !important;
+  color: #E64340 !important;
+  border: 2rpx solid #E64340 !important;
+  width: 80rpx !important;
+  height: 80rpx !important;
+  min-height: 80rpx !important;
+  line-height: 80rpx !important;
+  font-size: 32rpx !important;
+}
+
+/* 重新开始按钮 */
+.restart-btn {
+  margin-top: 20rpx;
+  width: 240rpx;
+  font-size: 30rpx;
+}
